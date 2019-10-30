@@ -45,8 +45,11 @@ public class MovieController {
             ObjectMapper objectMapper = new ObjectMapper();
             try {
                 JsonNode root = objectMapper.readTree(response);
+
                 Movie movieToAdd = objectMapper.convertValue(root.get("movie"), Movie.class);
                 MoviesRepository.add(movieToAdd);
+                return "redirect:/movie?id=" +id;
+
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
@@ -70,6 +73,7 @@ public class MovieController {
 
         return "movies";
     }
+
     @GetMapping("/list")
     public String moviesList(Model out) {
         out.addAttribute( "movieList",MoviesRepository.findAll());
