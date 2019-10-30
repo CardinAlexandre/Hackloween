@@ -10,7 +10,6 @@ public class MoviesRepository {
         {
         }};
 
-
     public static void registerMouviesList(int id, String title, String director, int year, String country, String createdAt, String updatedAt) {
         id = mouviesList.size() + 1;
         mouviesList.add(new Movie(id, title, director, year, country, createdAt, updatedAt));
