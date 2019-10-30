@@ -9,7 +9,7 @@ public class Movie {
     private String createdAt;
     private String updatedAt;
 
-    public Movie(int id) {}
+    public Movie(int i, String title, String director, int id, String country, String createdAt, String updatedAt) {}
 
     public int getId() {
         return id;
