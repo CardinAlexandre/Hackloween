@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<section class="movie-container">
+    <img th:src="${movieInfos.posterUrl}">
+    <h1 th:text="${movieInfos.title}"></h1>
+
+    <div class="button-container">
+        <a th:href="@{/movie(id=${movieInfos.id +1},add=${-1})}">Refus</a>
+        <a th:href="@{/movie(id=${movieInfos.id +1},add=${movieInfos.id})}">Valide</a>
+    </div>
+</section>
+</body>
+</html>
+</html>

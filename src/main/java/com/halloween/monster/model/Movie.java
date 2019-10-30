@@ -4,12 +4,24 @@ public class Movie {
     private int id;
     private String title;
     private String director;
+    private String posterUrl;
     private int year;
     private String country;
     private String createdAt;
     private String updatedAt;
 
-    public Movie(int i, String title, String director, int id, String country, String createdAt, String updatedAt) {}
+    public Movie() { }
+
+    public Movie(int id, String title, String director, String posterUrl, int year, String country, String createdAt, String updatedAt) {
+        this.id = id;
+        this.title = title;
+        this.director = director;
+        this.posterUrl = posterUrl;
+        this.year = year;
+        this.country = country;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 
     public int getId() {
         return id;
@@ -33,6 +45,14 @@ public class Movie {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
     }
 
     public int getYear() {
