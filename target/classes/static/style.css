@@ -1,0 +1,27 @@
+html {
+    background-color: black;
+    font-family: Creepster, sans-serif;
+}
+section.movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    width: 100%;
+    margin-top: 15%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a.button {
+    margin-top: 2em;
+    padding: 1em 1.5em;
+    background-color: darkorange;
+    color: white;
+    border-radius: 10px;
+    font-size: 2em;
+}
