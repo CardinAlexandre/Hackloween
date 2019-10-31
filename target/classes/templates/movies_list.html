@@ -6,15 +6,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+    <link href="list.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>List</title>
 </head>
 <body>
-<div  th:each="movieList: ${movieList}">
-    <h2 th:text="${movieList.title}">Titre filme</h2>
-    <img th:src="${movieList.posterUrl}" alt="Link">
-    <p th:text="${movieList.year}"></p>
-    <p th:text="${movieList.country}"></p>
-    <p th:text="${movieList.createdAt}"></p>
+<div class="card" th:each="movieList: ${movieList}">
+
+    <a class="btn btn-link" th:href="@{/monmovie(id=${movieList.id})}"><img th:src="${movieList.posterUrl}" alt="Link"></a>
+
+    <div class="content">
+        <h2 th:text="${movieList.title}">Titre filme</h2>
+        <p th:text="|Country: ${movieList.country}|"></p>
+        <p th:text="|released: ${movieList.year}|"></p>
+    </div>
+
 </div>
 </body>
 </html>

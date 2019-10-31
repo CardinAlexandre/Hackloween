@@ -9,10 +9,11 @@ public class Movie {
     private String country;
     private String createdAt;
     private String updatedAt;
+    private String coment;
 
     public Movie() { }
 
-    public Movie(int id, String title, String director, String posterUrl, int year, String country, String createdAt, String updatedAt) {
+    public Movie(int id, String title, String director, String posterUrl, int year, String country, String createdAt, String updatedAt,String coment) {
         this.id = id;
         this.title = title;
         this.director = director;
@@ -21,6 +22,15 @@ public class Movie {
         this.country = country;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+        this.coment = coment;
+    }
+
+    public String getComent() {
+        return coment;
+    }
+
+    public void setComent(String coment) {
+        this.coment = coment;
     }
 
     public int getId() {

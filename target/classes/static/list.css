@@ -1,0 +1,26 @@
+body {
+    color: aliceblue;
+    font-family: Creepster, sans-serif;
+    background-image: url("https://zupimages.net/up/19/44/1e4y.jpeg");
+    background-attachment: fixed;
+}
+
+div {
+    display: flex;
+}
+
+.card {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    height: 15em;
+}

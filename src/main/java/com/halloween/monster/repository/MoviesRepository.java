@@ -18,4 +18,17 @@ public class MoviesRepository {
     public static List<Movie> findAll() {
         return moviesList;
     }
+
+    public static void addComentaire (Movie movie){
+        moviesList.add(movie);
+    }
+
+    public static Movie findById(int id) {
+        for (Movie movie : moviesList) {
+            if (id==movie.getId()) {
+                return movie;
+            }
+        }
+        return null;
+    }
 }

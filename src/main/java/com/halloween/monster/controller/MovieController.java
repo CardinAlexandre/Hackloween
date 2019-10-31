@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import javax.servlet.http.HttpServletResponse;
-
 @Controller
 public class MovieController {
 
@@ -24,6 +22,7 @@ public class MovieController {
     public String index() {
         return "index";
     }
+
 
     @GetMapping("/movie")
     public String planet(Model model, @RequestParam(defaultValue = "1", required = false) Long id,
@@ -76,5 +75,12 @@ public class MovieController {
     public String moviesList(Model out) {
         out.addAttribute( "movieList",MoviesRepository.findAll());
         return "movies_list";
+    }
+
+
+    @GetMapping("/monmovie")
+    public String monmovie(Model out,@RequestParam(name = "id",defaultValue = "0")int id){
+        out.addAttribute("monmovie", MoviesRepository.findById(id));
+        return "monmovie";
     }
 }
