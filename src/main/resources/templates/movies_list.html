@@ -20,7 +20,7 @@
     <a class="btn btn-link" th:href="@{/monmovie(id=${movieList.id})}"><img th:src="${movieList.posterUrl}" alt="Link"></a>
 
     <div class="content">
-        <h2 th:text="${movieList.title}">Titre filme</h2>
+        <h2 th:text="${movieList.title}">Titre film</h2>
         <p th:text="|Country: ${movieList.country}|"></p>
         <p th:text="|released: ${movieList.year}|"></p>
     </div>

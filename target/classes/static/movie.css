@@ -31,7 +31,7 @@ img{
     width: 80%;
 }
 
-a {
+a.list_button {
     text-decoration: none;
     display: flex;
     justify-content: space-evenly;
@@ -40,4 +40,9 @@ a {
     border-radius: 10px;
     font-size: 2em;
     padding: 5px 10px;
+}
+
+.okignore {
+    margin-top: 1rem;
+    width: 30%;
 }

@@ -154,3 +154,14 @@ img {
     display: flex;
     justify-content: flex-end;
 }
+
+a.list_button {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: darkorange;
+    color: white;
+    border-radius: 10px;
+    font-size: 2em;
+    padding: 5px 10px;
+}

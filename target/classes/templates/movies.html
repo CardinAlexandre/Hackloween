@@ -11,15 +11,17 @@
     <title>Movies</title>
 </head>
 <body style="background-image: url('https://zupimages.net/up/19/44/1e4y.jpeg');">
-    <a class="list_button" th:href="@{/list}">List</a>
-    <section class="movie-container">
-        <img th:src="${movieInfos.posterUrl}">
-        <h1 th:text="${movieInfos.title}"></h1>
-    </section>
-    <div class="button-container">
-        <a th:href="@{/movie(id=${movieInfos.id +1},add=${-1})}">Refus</a>
-        <a th:href="@{/movie(id=${movieInfos.id +1},add=${movieInfos.id})}">Valide</a>
-    </div>
+<a class="list_button" th:href="@{/list}">List</a>
+<section class="movie-container">
+    <img th:src="${movieInfos.posterUrl}">
+    <h1 th:text="${movieInfos.title}"></h1>
+</section>
+<div class="button-container">
+    <a th:href="@{/movie(id=${movieInfos.id +1},add=${-1})}" class="okignore"><img
+            src="https://zupimages.net/up/19/44/hzzs.png"></a>
+    <a th:href="@{/movie(id=${movieInfos.id +1},add=${movieInfos.id})}" class="okignore"><img
+            src="https://zupimages.net/up/19/44/a8v5.png"></a>
+</div>
 </body>
 </html>
 </html>
