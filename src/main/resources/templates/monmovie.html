@@ -14,24 +14,27 @@
     <h1 th:text="${monmovie.title}"></h1>
     <img th:src="${monmovie.posterUrl}"/>
     <p th:text="${monmovie.director}"></p>
-    <form action="" method="get" >
-        <div class="form-example">
+    <form class="myform" action="" method="get" >
+
             <label for="story">Comentaire:</label>
             <textarea id="story" name="story"
                       rows="5" cols="33">
             </textarea>
-        </div>
+
         <div class="button-container">
             <a href="">Valide</a>
         </div>
     </form>
     <div class="gauche">
+        <p>Greg:</p>
         <p>Il est trop cool</p>
     </div>
     <div class="droite">
+        <p>Susane:</p>
         <p>Trop nazzzz</p>
     </div>
     <div class="gauche">
+        <p>Arno:</p>
         <p>J'ai meme pas peur!!!</p>
     </div>
 </div>

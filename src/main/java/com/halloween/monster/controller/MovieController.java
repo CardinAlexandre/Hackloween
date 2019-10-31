@@ -24,6 +24,12 @@ public class MovieController {
     }
 
 
+    @GetMapping("/connexion")
+    public String connexion(){
+        return "/movie";
+    }
+
+
     @GetMapping("/movie")
     public String planet(Model model, @RequestParam(defaultValue = "1", required = false) Long id,
                          @RequestParam(defaultValue = "-1", required = false) Long add) {
@@ -76,7 +82,6 @@ public class MovieController {
         out.addAttribute( "movieList",MoviesRepository.findAll());
         return "movies_list";
     }
-
 
     @GetMapping("/monmovie")
     public String monmovie(Model out,@RequestParam(name = "id",defaultValue = "0")int id){
