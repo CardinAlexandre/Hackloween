@@ -28,7 +28,7 @@ section.movie-container {
 }
 
 img{
-    width: 80%;
+    width: 75%;
 }
 
 a.list_button {
@@ -44,5 +44,5 @@ a.list_button {
 
 .okignore {
     margin-top: 1rem;
-    width: 30%;
+    width: 20%;
 }
