@@ -5,21 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-
-<body>
-<section class="movie-container">
-    <img th:src="${movieInfos.posterUrl}">
-    <h1 th:text="${movieInfos.title}"></h1>
-
+<body style="background-image: url('https://zupimages.net/up/19/44/1e4y.jpeg');">
+    <a class="list_button" th:href="@{/list}">List</a>
+    <section class="movie-container">
+        <img th:src="${movieInfos.posterUrl}">
+        <h1 th:text="${movieInfos.title}"></h1>
+    </section>
     <div class="button-container">
         <a th:href="@{/movie(id=${movieInfos.id +1},add=${-1})}">Refus</a>
         <a th:href="@{/movie(id=${movieInfos.id +1},add=${movieInfos.id})}">Valide</a>
     </div>
-</section>
 </body>
 </html>
 </html>

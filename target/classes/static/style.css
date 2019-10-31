@@ -1,14 +1,24 @@
+body {
+    margin: 0;
+}
+
 html {
-    background-color: black;
     font-family: Creepster, sans-serif;
 }
+
 section.movie-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    vertical-align: center;
+    align-items: center;
     width: 100%;
     margin-top: 15%;
+    color: aliceblue;
+}
+
+.list_button {
+    float: right;
+    margin: 0.5em 1em 0.5em 0;
 }
 
 .button-container {
@@ -17,11 +27,17 @@ section.movie-container {
     justify-content: space-around;
 }
 
-a.button {
-    margin-top: 2em;
-    padding: 1em 1.5em;
+img{
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
     background-color: darkorange;
     color: white;
     border-radius: 10px;
     font-size: 2em;
+    padding: 5px 10px;
 }
