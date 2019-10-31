@@ -14,7 +14,6 @@ import reactor.core.publisher.Mono;
 
 import javax.servlet.http.HttpServletResponse;
 
-
 @Controller
 public class MovieController {
 
@@ -29,10 +28,7 @@ public class MovieController {
     @GetMapping("/movie")
     public String planet(Model model, @RequestParam(defaultValue = "1", required = false) Long id,
                          @RequestParam(defaultValue = "-1", required = false) Long add) {
-        if (id > 10) {
 
-            return "redirect:/list";
-        }
         if (add != -1) {
             WebClient webClient = WebClient.create(MOVIE_URL);
             Mono<String> call = webClient.get()
@@ -70,6 +66,8 @@ public class MovieController {
             e.printStackTrace();
         }
         model.addAttribute("movieInfos", movieObject);
+
+        if (id > 10) { return "redirect:/list"; }
 
         return "movies";
     }
