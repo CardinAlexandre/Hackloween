@@ -1,43 +1,64 @@
 body {
-    margin: 0;
+    background-image: url('https://zupimages.net/up/19/44/jivc.jpg');
+    background-size: 130%;
+    background-position: center bottom 480px;
 }
 
-html {
-    font-family: Creepster, sans-serif;
+section {
+    height: 12em;
 }
 
-section.movie-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+    color: #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
     width: 100%;
-    margin-top: 15%;
-    color: aliceblue;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-.list_button {
-    float: right;
-    margin: 0.5em 1em 0.5em 0;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-img{
-    width: 80%;
-}
-
-a {
-    text-decoration: none;
-    display: flex;
-    justify-content: space-evenly;
-    background-color: darkorange;
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
     color: white;
-    border-radius: 10px;
-    font-size: 2em;
-    padding: 5px 10px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+

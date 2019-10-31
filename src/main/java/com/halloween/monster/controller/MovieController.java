@@ -26,6 +26,11 @@ public class MovieController {
         return "index";
     }
 
+    @GetMapping("/connexion")
+    public String connexion(){
+        return "/movie";
+    }
+
     @GetMapping("/movie")
     public String planet(Model model, @RequestParam(defaultValue = "1", required = false) Long id,
                          @RequestParam(defaultValue = "-1", required = false) Long add) {
