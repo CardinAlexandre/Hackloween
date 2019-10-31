@@ -26,7 +26,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color: #4CAF50;
+    background-color: darkorange;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -72,46 +72,5 @@ a {
     border-radius: 10px;
     font-size: 2em;
     padding: 5px 10px;
-    margin: 1rem;
+    margin: 0.5rem;
 }
-.gauche{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 250px;
-    margin: 1rem;
-    background-color: darkslateblue;
-    border-radius: 10px;
-    padding: 0.5rem;
-}
-.droite{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    margin: 1rem;
-    background-color: #338a8b;
-    border-radius: 10px;
-    padding: 0.5rem;
-
-}
-.gauche p{
-    margin: 0.2rem;
-}
-.droite p{
-    margin: 0.2rem;
-}
-.myform{
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 1rem;
-    background-color: #1e568b;
-    border-radius: 10px;
-    padding: 1rem;
-}
-.end{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-

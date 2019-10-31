@@ -5,44 +5,50 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="style.css" rel="stylesheet">
-    <link href="list.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="monmovie.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+<div class="list">
+    <a class="list_button" th:href="@{/list}">List</a>
+</div>
 <div class="content">
     <h1 th:text="${monmovie.title}"></h1>
-    <img th:src="${monmovie.posterUrl}"/>
+    <a class="btn btn-link"><img th:src="${monmovie.posterUrl}" alt="Link"></a>
     <p th:text="${monmovie.director}"></p>
-    <form class="myform" action="" method="get" >
-
-            <label for="story">Comentaire:</label>
-            <textarea id="story" name="story"
-                      rows="5" cols="33">
-            </textarea>
-
-        <div class="button-container">
-            <a href="">Valide</a>
-        </div>
-    </form>
 </div>
 
-    <div class="gauche">
-        <p>Greg:</p>
-        <p>Il est trop cool</p>
-    </div>
+<div class="gauche">
+    <p>Greg:</p>
+    <p>Il est trop cool</p>
+</div>
 
-    <div class="end">
+<div class="end">
     <div class="droite">
         <p>Susane:</p>
         <p>Trop nazzzz</p>
     </div>
 </div>
 
-    <div class="gauche">
-        <p>Arno:</p>
-        <p>J'ai meme pas peur!!!</p>
-    </div>
+<div class="gauche">
+    <p>Arno:</p>
+    <p>J'ai meme pas peur!!!</p>
+</div>
 
+<div class="content">
+    <form class="myform" action="" method="get">
+
+        <label for="story">Commentaire:</label>
+        <textarea id="story" name="story"
+                  rows="5" cols="33">
+            </textarea>
+
+        <div class="button-container">
+            <a class="valide" href="">Valide</a>
+        </div>
+    </form>
+</div>
 </body>
 </html>

@@ -72,7 +72,7 @@ public class MovieController {
         }
         model.addAttribute("movieInfos", movieObject);
 
-        if (id > 10) { return "redirect:/list"; }
+        if (id > 5) { return "redirect:/list"; }
 
         return "movies";
     }

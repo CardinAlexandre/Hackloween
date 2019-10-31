@@ -3,6 +3,7 @@ body {
     font-family: Creepster, sans-serif;
     background-image: url("https://zupimages.net/up/19/44/1e4y.jpeg");
     background-attachment: fixed;
+    background-position: center bottom 800px;
 }
 
 div {
@@ -12,7 +13,7 @@ div {
 .card {
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .content {
@@ -22,5 +23,15 @@ div {
 }
 
 img {
-    height: 15em;
+    height: 8em;
+}
+
+p {
+    white-space:nowrap;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 15px;
 }

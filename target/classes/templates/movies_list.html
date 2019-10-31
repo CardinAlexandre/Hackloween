@@ -8,10 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Creepster&display=swap" rel="stylesheet">
     <link href="list.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
     <title>List</title>
 </head>
 <body>
+<div class="list">
+    <a class="list_button" th:href="@{/}">Home</a>
+</div>
+
 <div class="card" th:each="movieList: ${movieList}">
 
     <a class="btn btn-link" th:href="@{/monmovie(id=${movieList.id})}"><img th:src="${movieList.posterUrl}" alt="Link"></a>
